@@ -2,7 +2,7 @@ let numeroSecreto = 0;
 let intentos = 1;
 let lista_numeros_sorteados = [];
 let numeroMaximo = 10;
-console.log(numeroSecreto);
+//console.log(numeroSecreto);
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
@@ -10,7 +10,7 @@ function asignarTextoElemento(elemento, texto){
 }
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById("valorUsuario").value);
-    console.log(intentos);
+    //console.log(intentos);
     if (numeroDeUsuario === numeroSecreto){
         asignarTextoElemento(`p`, `Acertaste el número en ${intentos} ${(intentos == 1) ? "vez" : "veces"}`);
         document.getElementById("reiniciar").removeAttribute("disabled");
@@ -29,8 +29,8 @@ function verificarIntento(){
 }
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random()* numeroMaximo)+1;
-    console.log(numeroGenerado);
-    console.log(lista_numeros_sorteados);
+    //console.log(numeroGenerado);
+    //console.log(lista_numeros_sorteados);
     //Si ya sorteamos todos los numeros
     if (lista_numeros_sorteados.length == numeroMaximo){
         asignarTextoElemento("p","Ya se sortearon todos los numero posibles")
